@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# 用于拦截不规范的git commit -m "<不规范message>"
+npx --no-install commitlint --edit

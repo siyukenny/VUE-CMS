@@ -1,0 +1,13 @@
+// 网络请求的基础配置：环境变量等
+let BASE_URL = ""
+const TIME_OUT = 10000
+
+if (process.env.NODE_ENV === "development") {
+  BASE_URL = "/api"
+} else if (process.env.NODE_ENV === "production") {
+  BASE_URL = "http://152.136.185.210:5000"
+} else if (process.env.NODE_ENV === "test") {
+  BASE_URL = "http://xhsensei.org/test"
+}
+
+export { BASE_URL, TIME_OUT }
